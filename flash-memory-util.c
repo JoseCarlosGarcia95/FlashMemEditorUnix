@@ -18,7 +18,7 @@ int flash_memory_util_search_pid_by_name(char *pname) {
   char cmd[100];
   char path[10];
 
-  sprintf(cmd, "pgrep %s --full", pname);
+  sprintf(cmd, "pgrep %s", pname);
 
   FILE *fp = popen(cmd, "r");
   if (fp == NULL) {
